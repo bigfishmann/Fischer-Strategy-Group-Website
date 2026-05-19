@@ -538,6 +538,135 @@
   .services-nav-list a:hover { color: var(--silver); }
   .services-nav-list a::before { content: '›'; color: var(--gold); }
 
+
+
+  /* ── INSIGHTS ── */
+  .insights-hero {
+    padding: 160px 60px 80px;
+    background: linear-gradient(135deg, #0a1628, #0d1f3c);
+    border-bottom: 1px solid rgba(200,212,224,0.1);
+  }
+  .insights-layout {
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2px;
+    background: rgba(200,212,224,0.08);
+    border-bottom: 1px solid rgba(200,212,224,0.08);
+  }
+  .insight-featured,
+  .insight-side-card,
+  .insight-card {
+    background: var(--navy);
+    border: 1px solid rgba(200,212,224,0.08);
+    transition: background 0.3s, transform 0.2s;
+  }
+  .insight-featured {
+    padding: 56px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .insight-featured:hover,
+  .insight-side-card:hover,
+  .insight-card:hover { background: var(--navy-mid); }
+  .insight-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .insight-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(30px, 3vw, 46px);
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .insight-title em { font-style: italic; color: var(--silver); }
+  .insight-excerpt {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-body);
+    max-width: 620px;
+  }
+  .insight-meta {
+    margin-top: 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .insights-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .insight-side-card {
+    padding: 36px;
+    flex: 1;
+  }
+  .insight-side-card .insight-title {
+    font-size: 28px;
+  }
+  .insights-grid-section {
+    padding: 80px 60px;
+    background: var(--navy);
+  }
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(200,212,224,0.08);
+    border: 1px solid rgba(200,212,224,0.08);
+    margin-top: 48px;
+  }
+  .insight-card {
+    padding: 40px 36px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+  }
+  .insight-card .insight-title {
+    font-size: 26px;
+  }
+  .insight-card .insight-excerpt,
+  .insight-side-card .insight-excerpt {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .insight-link {
+    margin-top: auto;
+    padding-top: 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .insight-link::after { content: '→'; font-size: 16px; transition: transform 0.2s; }
+  .insight-link:hover::after { transform: translateX(4px); }
+  .insights-empty-note {
+    margin-top: 48px;
+    border-left: 2px solid var(--gold);
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 720px;
+  }
+
   /* ── TESTIMONIALS ── */
   .testimonials-hero {
     padding: 160px 60px 80px;
@@ -787,6 +916,9 @@
     .testimonial-featured { grid-column: auto; padding: 40px; }
     .about-teaser { grid-template-columns: 1fr; }
     .contact-section { grid-template-columns: 1fr; }
+    .insights-layout { grid-template-columns: 1fr; padding-left: 32px; padding-right: 32px; }
+    .insights-grid { grid-template-columns: 1fr; }
+    .insights-grid-section, .insights-hero { padding-left: 32px; padding-right: 32px; }
     .services-strip { padding: 60px 32px; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .footer-links { justify-content: center; }
@@ -797,6 +929,8 @@
     .hero-headline { font-size: 42px; }
     .testimonials-grid { padding: 40px 24px; }
     .hero-stats { gap: 28px; }
+    .insight-featured, .insight-side-card, .insight-card { padding: 32px 28px; }
+    .insights-layout, .insights-grid-section { padding-top: 48px; padding-bottom: 48px; }
   }
 </style>
 </head>
@@ -812,6 +946,7 @@
     <li><a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
     <li><a href="#" onclick="showPage('services')" id="nav-services">Services</a></li>
     <li><a href="#" onclick="showPage('testimonials')" id="nav-testimonials">Testimonials</a></li>
+    <li><a href="#" onclick="showPage('insights')" id="nav-insights">Insights</a></li>
     <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
     <li><a href="#" onclick="showPage('contact')" class="nav-cta" id="nav-contact">Let's Talk</a></li>
   </ul>
@@ -824,6 +959,7 @@
   <a href="#" onclick="showPage('home');toggleMobile()">Home</a>
   <a href="#" onclick="showPage('services');toggleMobile()">Services</a>
   <a href="#" onclick="showPage('testimonials');toggleMobile()">Testimonials</a>
+  <a href="#" onclick="showPage('insights');toggleMobile()">Insights</a>
   <a href="#" onclick="showPage('about');toggleMobile()">About</a>
   <a href="#" onclick="showPage('contact');toggleMobile()">Let's Talk</a>
 </div>
@@ -1010,6 +1146,81 @@
 
 </div>
 
+
+<!-- ══════════════════════════════════════ INSIGHTS PAGE ══════════════════════════════════════ -->
+<div class="page" id="page-insights">
+  <div class="insights-hero">
+    <p class="section-eyebrow">Insights</p>
+    <h1 class="section-title" style="font-size:clamp(42px,5vw,72px)">Revenue Thinking for <em>Operators</em></h1>
+    <p class="section-body" style="margin-top:16px;max-width:640px">Executive briefs, GTM frameworks, and practical commentary on revenue strategy, AI-enabled sales transformation, RevOps, and scaling technology companies.</p>
+  </div>
+
+  <div class="insights-layout">
+    <article class="insight-featured">
+      <div>
+        <div class="insight-label">Featured Insight</div>
+        <h2 class="insight-title">RevOps in the Age of <em>AI</em></h2>
+        <p class="insight-excerpt">AI is pushing RevOps from back-office support into the strategic command center of the modern revenue organization. This executive brief explores Revenue System Debt™, GTM Engineering, and what AI-ready revenue organizations need to get right.</p>
+      </div>
+      <div>
+        <div class="insight-meta">Executive Brief · AI &amp; RevOps</div>
+        <a href="insights-request.html" class="insight-link" target="_blank" rel="noopener noreferrer">Request the Brief</a>
+
+<section id="revops-form" style="padding:80px 20px; max-width:800px; margin:0 auto;">
+  <script src="https://js-na2.hsforms.net/forms/embed/246191422.js" defer></script>
+  <div class="hs-form-frame" data-region="na2" data-form-id="37f1ce1a-8b79-4f03-ae1b-02b74d59bd93" data-portal-id="246191422"></div>
+</section>
+      </div>
+    </article>
+
+    <div class="insights-side">
+      <article class="insight-side-card">
+        <div class="insight-label">GTM Strategy</div>
+        <h3 class="insight-title">The Cost of Revenue System Debt</h3>
+        <p class="insight-excerpt">Why patched processes, fragmented tooling, and weak data discipline quietly slow growth long before they show up in board reporting.</p>
+        <a href="#" class="insight-link" onclick="showPage('contact')">Coming Soon</a>
+      </article>
+      <article class="insight-side-card">
+        <div class="insight-label">Sales Leadership</div>
+        <h3 class="insight-title">When Founder-Led Sales Stops Scaling</h3>
+        <p class="insight-excerpt">The signals that a company is ready to move from founder-led revenue to a formal sales organization — and the mistakes that create drag.</p>
+        <a href="#" class="insight-link" onclick="showPage('contact')">Coming Soon</a>
+      </article>
+    </div>
+  </div>
+
+  <section class="insights-grid-section">
+    <div style="max-width:640px">
+      <p class="section-eyebrow">Latest Thinking</p>
+      <h2 class="section-title">Practical Frameworks for <em>Growth</em></h2>
+      <p class="section-body">A dedicated library for FSG thought leadership. Replace the placeholder cards below as new articles, white papers, and executive briefs are published.</p>
+    </div>
+
+    <div class="insights-grid">
+      <article class="insight-card">
+        <div class="insight-label">AI Transformation</div>
+        <h3 class="insight-title">What AI-Ready Revenue Teams Look Like</h3>
+        <p class="insight-excerpt">How leading GTM organizations are redesigning workflows, data, and operating cadence around AI-enabled execution.</p>
+        <a href="#" class="insight-link" onclick="showPage('contact')">Coming Soon</a>
+      </article>
+      <article class="insight-card">
+        <div class="insight-label">Enterprise Sales</div>
+        <h3 class="insight-title">Selling Against the Status Quo</h3>
+        <p class="insight-excerpt">A practical look at creating urgency, building business cases, and moving enterprise buyers off “do nothing.”</p>
+        <a href="#" class="insight-link" onclick="showPage('contact')">Coming Soon</a>
+      </article>
+      <article class="insight-card">
+        <div class="insight-label">Revenue Leadership</div>
+        <h3 class="insight-title">Hiring the Right VP of Sales for Your Stage</h3>
+        <p class="insight-excerpt">Why stage fit matters more than logo pedigree when hiring revenue leadership for a growth-stage technology company.</p>
+        <a href="#" class="insight-link" onclick="showPage('contact')">Coming Soon</a>
+      </article>
+    </div>
+
+    <div class="insights-empty-note">As your content library grows, this page can be expanded into individual article pages, gated downloads, category filters, and HubSpot form capture for white papers and executive briefs.</div>
+  </section>
+</div>
+
 <!-- ══════════════════════════════════════ TESTIMONIALS PAGE ══════════════════════════════════════ -->
 <div class="page" id="page-testimonials">
   <div class="testimonials-hero">
@@ -1154,6 +1365,7 @@
     <a href="#" onclick="showPage('home')">Home</a>
     <a href="#" onclick="showPage('services')">Services</a>
     <a href="#" onclick="showPage('testimonials')">Testimonials</a>
+    <a href="#" onclick="showPage('insights')">Insights</a>
     <a href="#" onclick="showPage('about')">About</a>
     <a href="#" onclick="showPage('contact')">Contact</a>
   </div>
