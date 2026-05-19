@@ -939,7 +939,246 @@
 <!-- NAV -->
 <nav id="mainNav" aria-label="Main navigation">
   <a href="#" class="nav-logo" onclick="showPage('home')">
-    
+    <div class="nav-logo-mark">FSG</div>
+    <span class="nav-logo-text">Fischer Strategy Group</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a href="#" onclick="showPage('services')" id="nav-services">Services</a></li>
+    <li><a href="#" onclick="showPage('testimonials')" id="nav-testimonials">Testimonials</a></li>
+    <li><a href="#" onclick="showPage('insights')" id="nav-insights">Insights</a></li>
+    <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a href="#" onclick="showPage('contact')" class="nav-cta" id="nav-contact">Let's Talk</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');toggleMobile()">Home</a>
+  <a href="#" onclick="showPage('services');toggleMobile()">Services</a>
+  <a href="#" onclick="showPage('testimonials');toggleMobile()">Testimonials</a>
+  <a href="#" onclick="showPage('insights');toggleMobile()">Insights</a>
+  <a href="#" onclick="showPage('about');toggleMobile()">About</a>
+  <a href="#" onclick="showPage('contact');toggleMobile()">Let's Talk</a>
+</div>
+
+<main id="main-content">
+<!-- ══════════════════════════════════════ HOME PAGE ══════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-mountain"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Fischer Strategy Group</p>
+      <h1 class="hero-headline">Revenue<br>Built to<br><em>Scale.</em></h1>
+      <p class="hero-subhead">GTM strategy, sales organization development, and AI-enabled revenue transformation — for growth-stage technology companies ready to build something that lasts.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary" onclick="showPage('services')">Explore Services</a>
+        <a href="#" class="btn-secondary" onclick="showPage('about')">Meet Brian Fischer</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$300M+</div>
+        <div class="stat-label">ARR Scaled</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">700%</div>
+        <div class="stat-label">ARR Growth Record</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="services-strip">
+    <div style="max-width:600px">
+      <p class="section-eyebrow">Core Services</p>
+      <h2 class="section-title">What We <em>Do</em></h2>
+      <p class="section-body">Four focused practice areas built from two decades of operating experience — not theory.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" onclick="showServiceDetail(1)">
+        
+        <div class="service-name">Go-To-Market Strategy</div>
+        <div class="service-blurb">Scalable, repeatable revenue engines — from ICP clarity and pipeline architecture to sales org design and founder-led sales transformation.</div>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-card" onclick="showServiceDetail(2)">
+        
+        <div class="service-name">AI-Enabled Revenue Transformation</div>
+        <div class="service-blurb">Operationalizing AI across modern sales and GTM workflows to drive efficiency and execution.</div>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-card" onclick="showServiceDetail(3)">
+        
+        <div class="service-name">Executive Recruiting</div>
+        <div class="service-blurb">Connecting growth-stage companies with proven revenue leadership and enterprise sales talent.</div>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-card" onclick="showServiceDetail(4)">
+        
+        <div class="service-name">Founder & Revenue Advisory</div>
+        <div class="service-blurb">Operator-level advisory for founders and revenue leaders navigating growth, scale, and transformation.</div>
+        <div class="service-arrow">→</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <section style="background:var(--navy-mid);border-top:1px solid rgba(200,212,224,0.08);border-bottom:1px solid rgba(200,212,224,0.08)">
+    <div style="text-align:center; max-width:700px; margin:0 auto 60px">
+      <p class="section-eyebrow" style="justify-content:center">Vision | Execute | Scale</p>
+      <h2 class="section-title" style="font-size:clamp(28px,3.5vw,48px)">The Operating Framework<br>Behind Every Engagement</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(200,212,224,0.08);border:1px solid rgba(200,212,224,0.08)">
+      <div style="background:var(--navy-mid);padding:48px 40px">
+        
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:12px">Vision</h3>
+        <p style="font-size:14px;line-height:1.75;color:var(--text-muted)">Defining a clear GTM direction, ICP, and competitive positioning that aligns your entire organization around a common revenue goal.</p>
+      </div>
+      <div style="background:var(--navy);padding:48px 40px">
+        
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:12px">Execute</h3>
+        <p style="font-size:14px;line-height:1.75;color:var(--text-muted)">Building the people, process, and infrastructure — playbooks, hiring, CRM, forecasting cadence — required to turn strategy into repeatable results.</p>
+      </div>
+      <div style="background:var(--navy-mid);padding:48px 40px">
+        
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:12px">Scale</h3>
+        <p style="font-size:14px;line-height:1.75;color:var(--text-muted)">Embedding the systems, talent, and operational discipline that let great companies grow without losing the motion that made them successful.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align:center;padding:80px 60px">
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,3vw,38px);color:var(--silver);max-width:700px;margin:0 auto 40px;line-height:1.5">"The most dangerous competitor in enterprise sales isn't your biggest rival — it's the status quo."</p>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:40px">— Brian Fischer, Fischer Strategy Group</p>
+    <a href="#" class="btn-primary" onclick="showPage('contact')">Start a Conversation</a>
+  </section>
+
+  <div id="home-contact-section"></div>
+
+</div>
+
+<!-- ══════════════════════════════════════ SERVICES PAGE ══════════════════════════════════════ -->
+<div class="page" id="page-services">
+
+  <!-- Service list overview -->
+  <div id="services-overview">
+    <div class="service-hero" data-num="00">
+      <p class="section-eyebrow">What We Do</p>
+      <h1 class="section-title" style="font-size:clamp(42px,5vw,72px)">Core <em>Services</em></h1>
+      <p class="section-body" style="max-width:600px;margin-top:16px">Four practice areas grounded in operating experience. No frameworks without context. No advice without accountability.</p>
+    </div>
+    <div style="padding:80px 60px">
+      <div style="display:flex;flex-direction:column;gap:2px;background:rgba(200,212,224,0.08);border:1px solid rgba(200,212,224,0.08)">
+        <div class="service-card" style="padding:48px 48px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center" onclick="showServiceDetail(1)">
+          
+          <div>
+            <div class="service-name" style="font-size:18px;margin-bottom:8px">Go-To-Market Strategy</div>
+            <div class="service-blurb" style="font-size:14px">ICP definition · Market segmentation · Pricing & packaging · Pipeline architecture · Sales org design · Founder-led sales transformation</div>
+          </div>
+          <div style="font-size:24px;color:var(--gold);transition:transform 0.2s" class="service-arrow">→</div>
+        </div>
+        <div class="service-card" style="padding:48px 48px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center" onclick="showServiceDetail(2)">
+          
+          <div>
+            <div class="service-name" style="font-size:18px;margin-bottom:8px">AI-Enabled Revenue Operations & Sales Transformation</div>
+            <div class="service-blurb" style="font-size:14px">AI sales workflow integration · RevOps modernization · CRM enrichment automation · GTM process optimization</div>
+          </div>
+          <div style="font-size:24px;color:var(--gold)" class="service-arrow">→</div>
+        </div>
+        <div class="service-card" style="padding:48px 48px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center" onclick="showServiceDetail(3)">
+          
+          <div>
+            <div class="service-name" style="font-size:18px;margin-bottom:8px">Executive Recruiting & Revenue Leadership Search</div>
+            <div class="service-blurb" style="font-size:14px">VP Sales · CRO recruiting · Enterprise AE recruiting · GTM leadership assessment · Compensation benchmarking</div>
+          </div>
+          <div style="font-size:24px;color:var(--gold)" class="service-arrow">→</div>
+        </div>
+        <div class="service-card" style="padding:48px 48px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center" onclick="showServiceDetail(4)">
+          
+          <div>
+            <div class="service-name" style="font-size:18px;margin-bottom:8px">Founder & Revenue Leadership Advisory</div>
+            <div class="service-blurb" style="font-size:14px">Executive decision-making · GTM planning · Enterprise deal strategy · Board preparation · Organizational scaling</div>
+          </div>
+          <div style="font-size:24px;color:var(--gold)" class="service-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Individual service detail pages -->
+  <div id="service-detail" style="display:none">
+    <div class="service-hero" id="service-detail-hero" data-num="">
+      <a href="#" onclick="showServicesOverview()" style="display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);text-decoration:none;margin-bottom:32px;transition:color 0.2s" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--text-muted)'">← All Services</a>
+      <div id="service-eyebrow" class="section-eyebrow"></div>
+      <h1 class="section-title" id="service-title" style="font-size:clamp(36px,4.5vw,64px)"></h1>
+      <p class="section-body" id="service-tagline" style="margin-top:16px;max-width:600px"></p>
+    </div>
+    <div class="service-body-layout">
+      <div>
+        <p class="service-intro" id="service-intro"></p>
+        <p class="section-eyebrow">Service Areas</p>
+        <div class="service-areas-grid" id="service-areas"></div>
+      </div>
+      <div class="service-sidebar">
+        <div class="sidebar-card">
+          <h4>The FSG Approach</h4>
+          <div class="sidebar-quote" id="service-quote"></div>
+          <p id="service-sidebar-body"></p>
+          <a href="#" class="btn-primary" onclick="showPage('contact')" style="display:inline-block">Start a Conversation</a>
+          <div class="services-nav">
+            <h4>Other Services</h4>
+            <ul class="services-nav-list" id="other-services-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════ INSIGHTS PAGE ══════════════════════════════════════ -->
+<div class="page" id="page-insights">
+  <div class="insights-hero">
+    <p class="section-eyebrow">Insights</p>
+    <h1 class="section-title" style="font-size:clamp(42px,5vw,72px)">Revenue Thinking for <em>Operators</em></h1>
+    <p class="section-body" style="margin-top:16px;max-width:640px">Executive briefs, GTM frameworks, and practical commentary on revenue strategy, AI-enabled sales transformation, RevOps, and scaling technology companies.</p>
+  </div>
+
+  <div class="insights-layout">
+    <article class="insight-featured">
+      <div>
+        <div class="insight-label">Featured Insight</div>
+        <h2 class="insight-title">RevOps in the Age of <em>AI</em></h2>
+        <p class="insight-excerpt">AI is pushing RevOps from back-office support into the strategic command center of the modern revenue organization. This executive brief explores Revenue System Debt™, GTM Engineering, and what AI-ready revenue organizations need to get right.</p>
+      </div>
+      <div>
+        <div class="insight-meta">Executive Brief · AI &amp; RevOps</div>
+        <a href="RevOps-AI.html" class="insight-link" target="_blank" rel="noopener noreferrer">Request the Brief</a>
+
+
+      </div>
+    </article>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════ TESTIMONIALS PAGE ══════════════════════════════════════ -->
+<div class="page" id="page-testimonials">
+  <div class="testimonials-hero">
+    <p class="section-eyebrow">Client Testimonials</p>
+    <h1 class="section-title" style="font-size:clamp(42px,5vw,72px)">What Clients <em>Say</em></h1>
+    <p class="section-body" style="margin-top:16px">Testimonials coming soon.</p>
+  </div>
 </div>
 
 <!-- ══════════════════════════════════════ ABOUT PAGE ══════════════════════════════════════ -->
